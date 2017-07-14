@@ -1,26 +1,33 @@
-This is a starter template for [Ionic](http://ionicframework.com/docs/) projects.
+ionic2Firebase
 
-## How to use this template
+Ionic2 demo with Firebase email/password authentication.
 
-*This template does not work on its own*. The shared files for each starter are found in the [ionic2-app-base repo](https://github.com/ionic-team/ionic2-app-base).
+This Ionic2 application will show how to use Firebase email/password authentication in an Ionic2 application.
 
-To use this template, either create a new ionic project using the ionic node.js utility, or copy the files from this repository into the [Starter App Base](https://github.com/ionic-team/ionic2-app-base).
+Getting started
 
-### With the Ionic CLI:
+This applications needs a Firebase application. So first you should login to your Firebase console at console.firebase.google.com, create an application and get your Firebase webapp configuration.
 
-Take the name after `ionic2-starter-`, and that is the name of the template to be used when using the `ionic start` command below:
+Next you need to open the src/app/app.module.ts file and replace the lines below with you configuration settings:
 
-```bash
-$ sudo npm install -g ionic cordova
-$ ionic start myBlank blank
-```
+  apiKey: '*****',
+  authDomain: '*****', 
+  databaseURL: '*****',
+  storageBucket: '*****',
+  messagingSenderId: '*****' 
 
-Then, to run it, cd into `myBlank` and run:
 
-```bash
-$ ionic cordova platform add ios
-$ ionic cordova run ios
-```
+Next install the npm packages from the command line
 
-Substitute ios for android if not on a Mac.
+ ionic start ionic2Firebase blank
+cd ./ionic2Firebase
 
+npm install
+and start the application
+
+ionic serve
+More information
+
+For more information read this blog:
+
+https://github.com/vijaychauhanssn/ionic2Firebase
